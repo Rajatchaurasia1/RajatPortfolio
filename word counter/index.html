@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>word counter</title>
+    <style>
+        body{
+            padding: 50px 100px;
+
+        }
+        h2{
+            color: royalblue;
+            background:yellow;
+            
+           
+        }
+        h1{
+            text-align: center;
+            background-color: red;
+            color: white;
+            padding: 10px;   /* padding def:- space between text and border */ 
+            margin: 0px;     /* margin 0 px means no gap */ /* margin def:- outside the area of border */
+         }
+        #textbox{
+            width: 99.3%;      /* width of text area */ 
+            border-color: green;
+            font-size: 20px; 
+            background-color: pink;
+
+        }
+        p{
+            text-align: center;
+            background-color: #0067B0;
+            font-size: 25px;
+            font-weight: bold;
+            color: white;
+            padding: 10px;
+            margin: 0px;
+         }
+
+
+    </style>
+</head>
+<body>
+ <h2>Develop by:- Rajat chaurasia</h2>
+ <h1> word and character counter</h1>
+ <textarea id="textbox" cols="30" rows="10"> </textarea>  <!-- textarea basicaaal description type & 30,10 are size -->
+ <p>
+     <span id="word">0</span> word and   <!--using span for target or show particual item-->
+     <span id="char">0</span> characters      <!--why using span using div $$ -->
+ </p>
+ <script>
+     let textbox = document.getElementById("textbox");
+
+
+     textbox.addEventListener('input' , function(){                 /* here event name is input and anonymous function*/
+              var text = this.value;                     /* store value of text area */
+              let char = text.length;                                /* console.log(text); using for synatx check */
+              document.getElementById("char").innerHTML = char;    /* here selecting char id and change innerhtml throw target char span */
+        /* character counter complete */
+
+
+         
+       text = text.trim();       /* using trim for space cut form star and end of sentence */
+       let words = text.split(" ");    /* split() def:- split a string into an array of substrings. */ 
+       let cleanlist = words.filter(function(elm){     /* flter():- methdos creates an array filled with all array elements thats pass a test(provides as a function)   */   
+           return elm != "";           /* means return those element(elm) thats has not blank and store in cleanlist  */
+       });
+                             /*  console.log(); use for code check */
+       document.getElementById("word").innerHTML = cleanlist.length;
+     });
+ </script>
+</body>
+</html>

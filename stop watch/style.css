@@ -1,0 +1,50 @@
+body{
+    background-color: blue;
+    display: flex;
+    justify-content: center;    /* text center */
+    align-items: center;
+    height: 100vh;    /* here vh are viweport height */
+}
+#container{
+    color: #d7dfe4;
+    border: saddlebrown;
+    border-width: medium;
+}
+.digit{
+    font-size: 150px;
+    font-weight: bold;
+}
+.txt{
+    font-size: 40px;
+    font-weight: bold ;
+}
+#btn-container{
+    text-align: center;
+    margin-top: 40px;
+
+}
+.btn{                        /* its changes only btn and under the btn text */
+    padding: 7px 25px ;   /* top/bottom and left/right */
+    font-size: 15px;
+    margin: 0px 10px;
+    color: white;
+    border: 0px;
+    cursor: pointer;
+}
+#start{                      /* its changes apply on text  */
+      background-color: yellowgreen;
+
+}
+#stop{
+    background-color: turquoise;
+}
+#reset{
+    background-color: red;
+}
+h1{
+    text-align: center;
+    margin-bottom: 40%;
+    font-size: 30px;
+    background-color: purple;
+
+}

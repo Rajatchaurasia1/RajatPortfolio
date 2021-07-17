@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background changer</title>
+    <style>
+        body{
+            margin: 0px;
+            padding: 20px 100px; /* 20px top bottom and 100px left Right */
+        }
+        h1{
+            text-align: center;
+            text-decoration: underline;
+        }
+        img{
+           width: 100%;
+           height: auto;
+           margin: 0 auto;
+        }
+        p{
+            text-align: justify; /* this propertie solve text zig-zag form */
+            font-size: 18px;
+        }
+        .btn{
+            width: 20px;        /* span are by default inline thats reason its not contain height & width */
+            height: 20px;      /* its showing color without any element becouse its having height & width */
+            display: inline-block;
+            border: solid grey;
+            border-radius: 50%;
+            cursor: pointer;       /* when hover the color color than cursor change into a pointer */
+
+
+        }
+        #white{
+            background-color: white;
+        }
+        #aqua{
+            background-color: aquamarine;
+        }
+        #voilet{
+            background-color: #ce9aff;
+        }
+        #black{
+            background-color: black;
+        }
+        #color-switcher{
+            text-align: right;
+        }
+        #hlloo{
+            text-align: center;
+            font-size: 30px;
+            background-color: red;
+        }
+
+    </style>
+</head>
+<body>
+    <h2 id="hlloo"> Develop by:- RAJAT CHAURASIA</h2>
+    <div id="color-switcher">
+        <span class="btn" id="white" onclick="changeBG('#ffffff')"></span>  <!--here direct define event without id-->
+        <span class="btn" id="aqua" onclick="changeBG('#7fffd4')"></span>   <!-- under onclick event define chageBG function -->
+        <span class="btn" id="voilet" onclick="changeBG('#ce9aff')"></span> <!-- and define one parameter 'white'-->
+        <span class="btn" id="black" onclick="changeBG('#000000')"></span>   <!-- parameter pass as a color code-->
+    </div>
+    <h1 class="text"> About Us</h1>
+    <img src="About us image.jpg">
+    <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus tempora laboriosam velit quasi labore, voluptas, rerum rem nam a obcaecati quidem debitis, earum consectetur sunt modi iste eos molestias. Veniam porro numquam perspiciatis nemo ex est tempore odit consequuntur assumenda, dicta nisi debitis doloremque adipisci perferendis nostrum, nulla hic iste repellat distinctio. Deserunt eveniet iure ratione atque earum assumenda molestiae, soluta tempora ipsum quo, et doloremque nesciunt similique mollitia quod nobis exercitationem. Asperiores commodi perferendis quibusdam tenetur aperiam magnam deserunt in. Magnam, eum. Sed id rerum sapiente nobis explicabo voluptatum perferendis quidem, temporibus assumenda veniam, et cupiditate cum culpa molestiae, ea architecto aliquam. Recusandae quisquam expedita rerum nulla voluptatibus ut, possimus modi cupiditate sit? Ad, repudiandae. Dolores atque odio repellendus repudiandae amet fugit nostrum! Consequuntur cum in, commodi iusto exercitationem dolore cumque reprehenderit necessitatibus autem veritatis laborum nihil magnam aperiam, odio itaque consequatur ipsam amet? Dolore voluptates reiciendis porro beatae neque obcaecati nostrum! Enim impedit autem culpa commodi beatae non error reprehenderit, illum repellendus rem optio distinctio perferendis labore animi nulla eaque corrupti odit! Quos, numquam eveniet. At harum consequatur voluptatem saepe iste est ad mollitia corporis laborum minus. Cupiditate, exercitationem eos assumenda saepe quibusdam rem, reprehenderit consequuntur magnam vero minus natus officiis qui voluptas, sit esse quasi atque praesentium. Vero nesciunt et provident expedita, nihil quo laudantium quia quam. Molestiae laborum reprehenderit quibusdam et nemo voluptatibus corporis nesciunt similique iste. Dolorum architecto, voluptatum alias ab vero neque sed similique maxime eaque non, fugiat dicta? Temporibus dolor dolorem voluptatum quas inventore, tempore ipsum autem sunt omnis illum fugit sint perspiciatis dolorum minima voluptas, commodi rerum perferendis harum culpa amet quis! Quo, eveniet. Facere iste autem accusantium voluptatum rerum! Illo voluptatum vel in modi voluptatem quibusdam facilis nihil a molestiae maiores cupiditate, perferendis cumque nulla eaque soluta consequuntur est porro nisi beatae. Odio neque expedita consequatur ipsam atque animi fugit quod. Harum, sapiente nulla. Culpa animi quo, dolores doloremque pariatur eligendi voluptates earum, consectetur, cumque voluptatibus hic repellat laborum qui nihil. Aspernatur sequi nihil repellat eum ipsa, alias aut in sapiente laboriosam. Recusandae aperiam ducimus fugiat incidunt unde ab, pariatur dolor excepturi minus? Voluptates maiores repudiandae officia quas voluptatem quod id omnis, nihil tenetur asperiores ullam blanditiis! Recusandae quidem maiores facilis iure accusamus ullam nisi minus amet incidunt quasi dolore laborum quod earum eligendi saepe totam illum quibusdam, mollitia consequatur placeat quo maxime. Totam enim neque temporibus est aliquam recusandae incidunt, consectetur quibusdam odit rerum a ducimus tempore eveniet, laborum culpa ipsam velit illum blanditiis. Dolorem, labore? Earum incidunt itaque necessitatibus aut sint eum facere? Dolorum quasi harum tempora nulla ex vitae aspernatur. Minima perferendis debitis dolor repellendus eligendi suscipit veritatis asperiores incidunt dolore molestias reiciendis aperiam nihil natus iure, ex quo quod reprehenderit minus. Doloremque dolorum perferendis, dolorem eum itaque iusto eligendi perspiciatis in laboriosam, debitis aperiam sequi ut vero voluptatem eaque nam, iste reiciendis esse mollitia voluptas blanditiis? Iste officiis recusandae placeat doloremque, nisi suscipit ducimus ipsum possimus, ab repudiandae, libero sint animi quidem quia rerum quasi quaerat. Ex?
+   </p class="text">      <!--using class text for solving black color problem-->
+
+
+
+   <script>
+       function changeBG(color){  /*  */
+           document.body.style.backgroundColor = color;  
+
+
+           /*  in lower code solving the black color & text error*/
+           let txt = document.getElementsByClassName("text");  /* this 'txt' made array that reason not target directally */
+           if(color == "#000000"){       /*  means if color receve black than this */  /* == are comparision symbol*/
+             for(let elm of txt){     /* for of loop */    /* 'txt' array  target throw elm */
+                 elm.style.color = "white";
+
+             }
+           }
+           else{                        /* this loop means if black pass than white if another color than back to black color*/
+            for(let elm of txt){
+                 elm.style.color = "black";
+           }
+       }
+    }
+   </script>
+</body>
+</html>

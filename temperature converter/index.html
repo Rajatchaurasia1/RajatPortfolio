@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature converter</title>
+    <style>
+        #developer{
+            text-align: left;
+            font-size: 20px;
+            background-color: red;
+            
+        }
+        body{
+             padding: 50px 100px;  /* 50px are top&bottom and 100px are left&right */
+             background-color: blue;
+        }
+        h1{
+            text-align: center;
+            font-style: oblique;
+        }
+        #container{
+            text-align: center;
+            background-color: aqua;
+            padding: 50px;           /* padding from text and border */
+        }
+        .input-div{
+            display: inline-block;        /* inline block means code/lines  in one line */ 
+        }
+        .inp{
+            padding: 5px 10px;
+            margin: 10px;
+            font-size: 30px;
+            font-weight: bold ;
+            width: 250px;
+            text-align: center;
+        }
+        label{
+            font-size: 22px;
+            color:red;
+        }
+    </style>
+</head>
+<body>
+    <h2 id='developer'> Develop by :- RAJAT CHAURASIA</h2>
+    <h1> Temperature converter</h1>
+    <div id="container">
+        <div class="input-div">
+            <label>celsius</label><br>          <!-- label for server element       -->
+            <input type="number" value="0" id="cel" class="inp">
+        </div>
+        <div class="input-div">
+            <label>farenhite</label><br>
+            <input type="number" value="32" id="fah" class="inp">
+        </div>
+   </div>
+   <script>
+       var cel = document.getElementById("cel");
+       var fah = document.getElementById("fah");
+
+       cel.addEventListener('input' , function(){              //    Anonymonous function 
+        let c = this.value;                                // user input value
+        let f = (c* 9/5)+ 32;                           // formula search from google & paste
+        if(!Number.isInteger(f)){                     // number class using for checking (F)given numer is integer of not, this condition working on false
+            f = f.toFixed(4);                     // tofixed propertie use for how much numbers after decimal
+        }                      
+        fah.value = f;                          // here change var fan value
+     });
+
+     
+       fah.addEventListener('input' , function(){      //    Anonymonous function 
+        let f = this.value;                       // user input value
+        let c = (f - 32) * 5/9;               // formula search from google & paste
+        if(!Number.isInteger(c)){          // checking given numer is integer of not 
+            c = c.toFixed(4);          // false run this and true means its no decimal number / integer number
+        }         
+        cel.value = c;                  // here change var cel value 
+     });
+
+   </script>
+
+</body>
+</html>
